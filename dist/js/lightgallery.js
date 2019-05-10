@@ -1494,10 +1494,9 @@
 
         if (!d) {
             _lgUtils2.default.trigger(_this.el, 'onBeforeClose');
+            document.body.scrollTop = _this.prevScrollTop;
+            document.documentElement.scrollTop = _this.prevScrollTop;
         }
-
-        document.body.scrollTop = _this.prevScrollTop;
-        document.documentElement.scrollTop = _this.prevScrollTop;
 
         /**
          * if d is false or undefined destroy will only close the gallery
